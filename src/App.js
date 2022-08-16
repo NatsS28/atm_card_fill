@@ -1,24 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import Creditcard from './credit-card/Creditcard';
+import CreditCardForm from './credit-card/CreditCardForm';
+import { useState } from 'react';
 
 function App() {
+    const [data, setData] = useState({});
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+          <div className="App">
+              <Creditcard data={data} setData={setData} />
+              <CreditCardForm data={data} setData={setData}/>
+          </div>
+      </>
   );
 }
 
